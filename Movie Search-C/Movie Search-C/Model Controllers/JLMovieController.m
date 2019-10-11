@@ -90,6 +90,13 @@ static NSString * const kSizeKey = @"w200";
 - (void)fetchImage:(JLMovie *)movie completion:(void (^)(UIImage * _Nullable))completion
 {
     // Goal URL: http://image.tmdb.org/t/p/w200/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg
+    NSLog(@"%@", movie.title);
+    NSLog(@"%@", movie.imagePath);
+    if (movie.imagePath == (NSString *) [NSNull null])
+    {
+        completion(nil);
+        return;
+    }
     NSString *imagePath = movie.imagePath;
     NSURL *imageBaseURL = [NSURL URLWithString:kImageBaseURLString];
     NSURL *sizeURL = [imageBaseURL URLByAppendingPathComponent:kSizeKey];

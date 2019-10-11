@@ -24,6 +24,7 @@ class JLMovieResultTableViewCell: UITableViewCell {
     func updateViews() {
         guard let movieItem = movieItem else { return }
         movieTitleLabel.text = movieItem.title
+        movieTitleLabel.adjustsFontSizeToFitWidth = true
         movieRatingLabel.text = "Rating: \(movieItem.rating)"
         movieDescriptionLabel.text = movieItem.movieDescription
         movieDescriptionLabel.adjustsFontForContentSizeCategory = true
@@ -31,9 +32,12 @@ class JLMovieResultTableViewCell: UITableViewCell {
         moviePosterImageView.image = nil
         
         JLMovieController.sharedInstance().fetchImage(movieItem) { (image) in
-            guard let image = image else { return }
-            DispatchQueue.main.async {
-                self.moviePosterImageView.image = image
+            if let image = image {
+                DispatchQueue.main.async {
+                    self.moviePosterImageView.image = image
+                }
+            } else {
+                print("The image was nil")
             }
         }
     }
