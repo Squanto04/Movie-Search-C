@@ -12,6 +12,8 @@
 		353843832350D77500925ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353843822350D77500925ED5 /* Assets.xcassets */; };
 		353843862350D77500925ED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353843842350D77500925ED5 /* LaunchScreen.storyboard */; };
 		353843892350D77500925ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 353843882350D77500925ED5 /* main.m */; };
+		353843982350DB4500925ED5 /* JLMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 353843972350DB4500925ED5 /* JLMovie.m */; };
+		3538439C2350DCED00925ED5 /* JLMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538439B2350DCED00925ED5 /* JLMovieController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		353843852350D77500925ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353843872350D77500925ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353843882350D77500925ED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		353843962350DB4500925ED5 /* JLMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLMovie.h; sourceTree = "<group>"; };
+		353843972350DB4500925ED5 /* JLMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLMovie.m; sourceTree = "<group>"; };
+		3538439A2350DCED00925ED5 /* JLMovieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLMovieController.h; sourceTree = "<group>"; };
+		3538439B2350DCED00925ED5 /* JLMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLMovieController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				3538438F2350D78600925ED5 /* Sources */,
+				353843952350DA8E00925ED5 /* Models */,
+				353843992350DCD600925ED5 /* Model Controllers */,
 				353843902350D79300925ED5 /* Views */,
 				353843912350D79D00925ED5 /* Resources */,
 			);
@@ -90,6 +98,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		353843952350DA8E00925ED5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				353843962350DB4500925ED5 /* JLMovie.h */,
+				353843972350DB4500925ED5 /* JLMovie.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		353843992350DCD600925ED5 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3538439A2350DCED00925ED5 /* JLMovieController.h */,
+				3538439B2350DCED00925ED5 /* JLMovieController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +142,7 @@
 		3538436E2350D77400925ED5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JL;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Squanto Inc";
 				TargetAttributes = {
@@ -160,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3538439C2350DCED00925ED5 /* JLMovieController.m in Sources */,
 				353843892350D77500925ED5 /* main.m in Sources */,
 				3538437B2350D77400925ED5 /* AppDelegate.m in Sources */,
+				353843982350DB4500925ED5 /* JLMovie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
