@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, copy, readonly) NSString *rating;
 @property (nonatomic, copy, readonly) NSString *movieDescription;
-@property (nonatomic, copy, readonly, nullable)NSString *image;
+@property (nonatomic, copy, readonly, nullable)NSString *imagePath;
 
 - (JLMovie *)initWithTitle:(NSString *)title
                     rating:(NSString *)rating
           movieDescription:(NSString *)movieDesription
-                     image:(NSString *)image;
+                     imagePath:(NSString *)imagePath;
 
 @end
 

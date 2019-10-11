@@ -64,6 +64,7 @@
 				3538438F2350D78600925ED5 /* Sources */,
 				353843952350DA8E00925ED5 /* Models */,
 				353843992350DCD600925ED5 /* Model Controllers */,
+				3538439D2350E73A00925ED5 /* View Controllers */,
 				353843902350D79300925ED5 /* Views */,
 				353843912350D79D00925ED5 /* Resources */,
 			);
@@ -114,6 +115,13 @@
 				3538439B2350DCED00925ED5 /* JLMovieController.m */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		3538439D2350E73A00925ED5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

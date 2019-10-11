@@ -11,7 +11,7 @@
 @implementation JLMovie
 
 
-- (JLMovie *)initWithTitle:(NSString *)title rating:(NSString *)rating movieDescription:(NSString *)movieDesription image:(NSString *)image
+- (JLMovie *)initWithTitle:(NSString *)title rating:(NSString *)rating movieDescription:(NSString *)movieDesription imagePath:(NSString *)imagePath
 {
     self = [super init];
     if (self)
@@ -19,7 +19,7 @@
         _title = title;
         _rating = rating;
         _movieDescription = movieDesription;
-        _image = image;
+        _imagePath = imagePath;
     }
     return self;
 }
