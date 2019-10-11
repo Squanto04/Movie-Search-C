@@ -12,7 +12,7 @@
         <!--Movies-->
         <scene sceneID="ExF-Ke-1CO">
             <objects>
-                <tableViewController id="9dB-8K-pI2" sceneMemberID="viewController">
+                <tableViewController id="9dB-8K-pI2" customClass="JLMovieListTableViewController" customModule="Movie_Search_C" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="INA-HV-c4o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,21 +23,21 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieListCell" rowHeight="192" id="rqz-Vf-AUt">
-                                <rect key="frame" x="0.0" y="72" width="414" height="192"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieListCell" rowHeight="200" id="rqz-Vf-AUt" customClass="JLMovieResultTableViewCell" customModule="Movie_Search_C" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rqz-Vf-AUt" id="moz-0V-e6f">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="191.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5t-Qe-VaV">
-                                            <rect key="frame" x="19.999999999999993" y="11" width="123.33333333333331" height="170"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5t-Qe-VaV">
+                                            <rect key="frame" x="20" y="11" width="129" height="178"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="G5t-Qe-VaV" secondAttribute="height" multiplier="103:142" id="VS2-dX-w2V"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-kh-XSQ">
-                                            <rect key="frame" x="153.33333333333337" y="11" width="240.66666666666663" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-kh-XSQ">
+                                            <rect key="frame" x="159" y="11" width="235" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="juO-0N-Q16"/>
                                             </constraints>
@@ -45,8 +45,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucs-cj-lAs">
-                                            <rect key="frame" x="153.33333333333337" y="37" width="240.66666666666663" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucs-cj-lAs">
+                                            <rect key="frame" x="159" y="37" width="235" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="B9d-tN-TXN"/>
                                             </constraints>
@@ -54,9 +54,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-8d-r2F">
-                                            <rect key="frame" x="153.33333333333337" y="63" width="240.66666666666663" height="113"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movieDescription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-8d-r2F">
+                                            <rect key="frame" x="159" y="63" width="235" height="121"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -77,6 +77,12 @@
                                         <constraint firstItem="ucs-cj-lAs" firstAttribute="leading" secondItem="G5t-Qe-VaV" secondAttribute="trailing" constant="10" id="sGY-6q-Eys"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieDescriptionLabel" destination="hJb-8d-r2F" id="O8c-sv-ouS"/>
+                                    <outlet property="moviePosterImageView" destination="G5t-Qe-VaV" id="t0j-Br-WaY"/>
+                                    <outlet property="movieRatingLabel" destination="ucs-cj-lAs" id="Qeh-K4-oHh"/>
+                                    <outlet property="movieTitleLabel" destination="jbc-kh-XSQ" id="htv-v0-jTF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -85,6 +91,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Movies" id="QBy-GI-CVj"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Jaa-Es-TWj" id="8FL-o1-Gak"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPR-O3-TXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

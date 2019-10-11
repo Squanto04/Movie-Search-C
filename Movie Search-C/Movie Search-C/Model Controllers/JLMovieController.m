@@ -76,7 +76,7 @@ static NSString * const kSizeKey = @"w200";
             NSString *imagePath = resultsDictionary[@"poster_path"];
             NSString *title = resultsDictionary[@"title"];
             NSString *movieDescription = resultsDictionary[@"overview"];
-            NSString *rating = resultsDictionary[@"vote_average"];
+            NSNumber *rating = resultsDictionary[@"vote_average"];
             
             JLMovie *movie = [[JLMovie alloc] initWithTitle:title rating:rating movieDescription:movieDescription imagePath:imagePath];
             
@@ -94,7 +94,7 @@ static NSString * const kSizeKey = @"w200";
     NSURL *imageBaseURL = [NSURL URLWithString:kImageBaseURLString];
     NSURL *sizeURL = [imageBaseURL URLByAppendingPathComponent:kSizeKey];
     NSURL *finalURL = [sizeURL URLByAppendingPathComponent:imagePath];
-    
+    NSLog(@"%@", finalURL);
     [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error)
         {
